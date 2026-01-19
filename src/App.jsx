@@ -1,4 +1,6 @@
 import backgroundImage from "./assets/Hero.png";
+import rendererImage from "./assets/software-renderer.png";
+import codeImage from "./assets/images.jpg";
 import portrait from "./assets/portrait.jpg";
 import education from "./assets/education.svg";
 import job from "./assets/job.svg";
@@ -13,6 +15,7 @@ import java from "./assets/languages/java-14.svg";
 
 import docker from "./assets/tech/docker-4.svg";
 import git from "./assets/tech/git.svg";
+import github from "./assets/tech/Github_Invertocat_White.svg";
 import ros from "./assets/tech/ROS.svg";
 import monday from "./assets/tech/monday-1.svg";
 import slack from "./assets/tech/slack.svg";
@@ -167,10 +170,7 @@ function App() {
 
           <div className='w-1/2 h-fit text-left text-white'>
             <h1 className='font-monument-bold text-[1.5vw] text-pink-500'>About me</h1>
-            <p className='font-monument-regular text-[0.8vw] my-1'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi sapiente delectus illum dolorum blanditiis, nesciunt obcaecati quisquam quo, tempore molestiae ullam numquam possimus iste veniam at et vel, ad ut.
-            </p>
-
+            <p className="font-monument-regular text-[0.8vw] my-1">Hi, I'm Theo – a third-year IT student at KTH. My studies have given me a solid understanding of programming, web design, and hardware and network fundamentals. I enjoy exploring technology through personal and collaborative <span className="text-pink-500 cursor-pointer underline" onClick={(e) => {e.preventDefault(); projRef.current?.scrollIntoView({ behavior: "smooth"});}}>projects</span> that help me grow both technically and professionally.<br/><br/>In addition to this I was a proud member of the KTH Formula Student team during the 2025 season, where I together with 90 other students designed and built a racing car for the largest student engineering competition. Outside of tech, I enjoy staying active and playing the guitar.<br/><br/>I'd love to connect with others who share my passion for innovation, feel free to reach out! </p>
             <h1 className='font-monument-bold text-[1vw] my-3 text-pink-500'>Skills & Tech</h1>
             <div className=' font-monument-regular'>
               <ul className='flex flex-wrap text-[0.8vw]'>
@@ -216,7 +216,7 @@ function App() {
             <Reveal>
             <div className='w-full flex items-center text-2xl'>
               <p className='font-monument-regular float-right mr-auto'>Formula Student</p>
-              <p className='font-monument-light text-[0.8vw]'>Aug. 2024 - Present</p>
+              <p className='font-monument-light text-[0.8vw]'>Aug. 2024 - 2025</p>
               <div className='h-1 w-10 bg-pink-500 m-5 2xl:block hidden'></div>
               <div className="2xl:p-0 py-8"></div>
               <div className='float-right mr-4 w-16 h-16 rounded-4xl bg-pink-500 content-center 2xl:block hidden'>
@@ -254,7 +254,7 @@ function App() {
             </div>
             </Reveal>
             <Reveal>
-            <p className='relative 2xl:ml-40 ml-0 text-left font-monument-light text-[0.8vw] -top-4.5'>Information and Communication Technology</p>
+            <p className='relative 2xl:ml-40 ml-0 text-left font-monument-light text-[0.8vw] -top-4.5'>Bachelors Degree: Information Technology</p>
             </Reveal>
           </div>
 
@@ -330,27 +330,43 @@ function App() {
         <h1 className='font-monument-bold text-[1.8vw]'>Projects:</h1>
         <div className='w-3/4 h-3/4 m-auto flex flex-wrap justify-center items-center *:m-5'>
         <Card>
-          <div className='w-[20vw] h-[20vw] bg-[#1c1c1c] rounded-[20px] overflow-hidden'>
+          <div className='w-[20vw] h-[17.5vw] bg-[#1c1c1c] rounded-t-[20px] overflow-hidden'>
             <h1 className='absolute font-monument-bold right-1/2 translate-1/2 '>Raytracer</h1>
             <img src={backgroundImage} alt="" />
-            <p className='font-monument-light text-left p-2 text-[0.8vw]'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur cum enim nemo molestiae beatae? Accusamus eveniet velit explicabo saepe excepturi.</p>
+            <p className='font-monument-light text-left p-2 text-[0.8vw]'>A raytacer built from scratch in java without any external libraries. Handles lighting, shadows and reflections in a realistic manner.</p>
           </div>
-        </Card>
-        <Card>
-          <div className='w-[20vw] h-[20vw] bg-[#1c1c1c] rounded-[20px] overflow-hidden'>
-            <h1 className='absolute font-monument-bold right-1/2 translate-1/2 '>Raytracer</h1>
-            <img src={backgroundImage} alt="" />
-            <p className='font-monument-light text-left p-2 text-[0.8vw]'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur cum enim nemo molestiae beatae? Accusamus eveniet velit explicabo saepe excepturi.</p>
+          <div className='w-[20vw] h-[2.5vw] bg-[#1c1c1c] rounded-b-[20px] overflow-hidden'>
+            <a href="https://github.com/TheoWattman/Raytracer" className='flex items-center float-right m-4 z-10 h-[0vw]'><img src={github} className='h-[2em] ml-2' alt="" /></a>
+
           </div>
         </Card>
 
         <Card>
-          <div className='w-[20vw] h-[20vw] bg-[#1c1c1c] rounded-[20px] overflow-hidden'>
-            <h1 className='absolute font-monument-bold right-1/2 translate-1/2 '>Raytracer</h1>
-            <img src={backgroundImage} alt="" />
-            <p className='font-monument-light text-left p-2 text-[0.8vw]'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur cum enim nemo molestiae beatae? Accusamus eveniet velit explicabo saepe excepturi.</p>
+          <div className='w-[20vw] h-[17.5vw] bg-[#1c1c1c] rounded-t-[20px] overflow-hidden'>
+            <h1 className='absolute font-monument-bold right-1/2 translate-1/2 '>Renderer</h1>
+            <img src={rendererImage} alt="" />
+            <p className='font-monument-light text-left p-2 text-[0.8vw]'>A software renderer built from scratch in java without any external libraries. </p>
+          </div>
+          <div className='w-[20vw] h-[2.5vw] bg-[#1c1c1c] rounded-b-[20px] overflow-hidden'>
+            <a href="https://github.com/RiotHelmet/Simple-messy-software-renderer.git" className='flex items-center float-right m-4 z-10 h-[0vw]'><img src={github} className='h-[2em] ml-2' alt="" /></a>
+
           </div>
         </Card>
+
+        {/* <Card>
+          <div className='w-[20vw] h-[17.5vw] bg-[#1c1c1c] rounded-t-[20px] overflow-hidden'>
+            <h1 className='absolute font-monument-bold right-1/2 translate-1/2 '>Compiler</h1>
+            <img src={codeImage} className="w-full h-[10vw] overflow-clip" alt="" />
+            <p className='font-monument-light text-left p-2 text-[0.8vw]'>
+              A simple compiler built for the ID2202 course at KTH. Successfuly lexes, parses and compiles a small subset of the C programming language into x86 assembly.
+            </p>
+          </div>
+          <div className='w-[20vw] h-[2.5vw] bg-[#1c1c1c] rounded-b-[20px] overflow-hidden'>
+            <a href="https://github.com/RiotHelmet/Simple-messy-software-renderer.git" className='flex items-center float-right m-4 z-10 h-[0vw]'><img src={github} className='h-[2em] ml-2' alt="" /></a>
+
+          </div>
+        </Card> */}
+
         <div className='w-1/4 aspect-square bg-pink-500 mx-auto rounded-[50%] blur-[350px] absolute -z-1'></div>
         </div>
         
